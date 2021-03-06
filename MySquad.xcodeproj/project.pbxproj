@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921EB28E25F41A83001A7726 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EB28D25F41A83001A7726 /* LoginModel.swift */; };
+		921EB29125F41A91001A7726 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EB29025F41A91001A7726 /* SignUpModel.swift */; };
 		928A645E25EB4BAE00C7A625 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A645D25EB4BAE00C7A625 /* Constants.swift */; };
 		928A646125EB4DE300C7A625 /* HomeUITabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A646025EB4DE300C7A625 /* HomeUITabBarContoller.swift */; };
 		92BB177825EAD6CB00612322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB177725EAD6CB00612322 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		575404F4CB4DC44967B8A893 /* Pods_MySquad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySquad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDBE589D058C8AD793F3C8F /* Pods-MySquad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySquad.debug.xcconfig"; path = "Target Support Files/Pods-MySquad/Pods-MySquad.debug.xcconfig"; sourceTree = "<group>"; };
+		921EB28D25F41A83001A7726 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		921EB29025F41A91001A7726 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		928A645D25EB4BAE00C7A625 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		928A646025EB4DE300C7A625 /* HomeUITabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITabBarContoller.swift; sourceTree = "<group>"; };
 		92BB177425EAD6CB00612322 /* MySquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,8 @@
 		928A646525EB5A0300C7A625 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				921EB28D25F41A83001A7726 /* LoginModel.swift */,
+				921EB29025F41A91001A7726 /* SignUpModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,8 +246,10 @@
 				92BB178E25EAE3A900612322 /* DesignableView.swift in Sources */,
 				92BB177C25EAD6CB00612322 /* LoginViewController.swift in Sources */,
 				92BB177825EAD6CB00612322 /* AppDelegate.swift in Sources */,
+				921EB29125F41A91001A7726 /* SignUpModel.swift in Sources */,
 				92BB177A25EAD6CB00612322 /* SceneDelegate.swift in Sources */,
 				92BB179225EAEB6600612322 /* SignUpViewController.swift in Sources */,
+				921EB28E25F41A83001A7726 /* LoginModel.swift in Sources */,
 				928A645E25EB4BAE00C7A625 /* Constants.swift in Sources */,
 				928A646125EB4DE300C7A625 /* HomeUITabBarContoller.swift in Sources */,
 			);
