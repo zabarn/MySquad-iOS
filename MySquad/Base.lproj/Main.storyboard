@@ -190,6 +190,7 @@
                         <outlet property="errorLabel" destination="Xjp-ba-Fld" id="qAc-Ic-uw4"/>
                         <outlet property="loginButton" destination="UJw-eE-7hB" id="L8R-Yj-8sq"/>
                         <outlet property="passwordTextField" destination="Dwu-TG-dwS" id="4T4-dc-ZA9"/>
+                        <segue destination="a8y-gr-whf" kind="show" identifier="LoginToTabBar" id="Fk5-CG-MIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -369,27 +370,55 @@
                         <outlet property="errorLabel" destination="NfT-ON-NCy" id="Ta4-4c-B8P"/>
                         <outlet property="passwordTextField" destination="mVy-xg-oHA" id="4If-BV-yQS"/>
                         <outlet property="signUpButton" destination="PFp-hd-5f6" id="RWV-FK-wgb"/>
+                        <segue destination="a8y-gr-whf" kind="show" identifier="SignUpToTabBar" id="YHW-bY-hVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeP-lN-Qs4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="496"/>
+            <point key="canvasLocation" x="1022" y="492"/>
         </scene>
-        <!--Item 2-->
+        <!--Profile View Controller-->
         <scene sceneID="gWa-vX-W59">
             <objects>
-                <viewController id="emv-i0-viQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="emL-wb-F32">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="4ef-zR-OWc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="cFB-4s-tdg"/>
+                <viewController storyboardIdentifier="ProfileViewController" id="emv-i0-viQ" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="MySquad" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QpM-Iv-8FZ"/>
+                    <connections>
+                        <segue destination="Q7o-Vj-s7t" kind="show" identifier="ProfileToPersonal" id="mwI-05-6ji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X48-0r-ynI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="398"/>
+            <point key="canvasLocation" x="3597" y="1256"/>
+        </scene>
+        <!--Personal View Controller-->
+        <scene sceneID="x0D-8z-2tD">
+            <objects>
+                <viewController id="Q7o-Vj-s7t" userLabel="Personal View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nb-WZ-Jde">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxM-Nf-L1q">
+                                <rect key="frame" x="16" y="140" width="396" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="0.6491009593" green="0.1181504503" blue="0.12607178090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ynL-Be-wst"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mxM-Nf-L1q" firstAttribute="leading" secondItem="ynL-Be-wst" secondAttribute="leading" constant="16" id="REe-1k-vuW"/>
+                            <constraint firstItem="ynL-Be-wst" firstAttribute="trailing" secondItem="mxM-Nf-L1q" secondAttribute="trailing" constant="16" id="dDj-4h-Zbq"/>
+                            <constraint firstItem="mxM-Nf-L1q" firstAttribute="top" secondItem="ynL-Be-wst" secondAttribute="top" id="pjI-vt-u98"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OBN-9I-FNr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yz1-Qs-Ade" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4704.6728971962611" y="939.52483801295898"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="j83-BF-uvf">
@@ -411,6 +440,7 @@
         <scene sceneID="USU-je-SI8">
             <objects>
                 <tabBarController storyboardIdentifier="HomeTabBarController" id="a8y-gr-whf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QQS-N0-LdJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZyV-Ip-lW8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -418,16 +448,43 @@
                     </tabBar>
                     <connections>
                         <segue destination="Ft7-Q7-Pdu" kind="relationship" relationship="viewControllers" id="tvM-yz-KVy"/>
-                        <segue destination="emv-i0-viQ" kind="relationship" relationship="viewControllers" id="FXy-yM-ixd"/>
+                        <segue destination="stC-bf-aU7" kind="relationship" relationship="viewControllers" id="FXy-yM-ixd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfh-Pc-D0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="94"/>
+            <point key="canvasLocation" x="1874" y="94"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="wr9-fW-X9P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="stC-bf-aU7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="cFB-4s-tdg" userLabel="Profile Name"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2yD-iR-rPP">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                            <color key="textColor" red="0.6491009593" green="0.1181504503" blue="0.12607178090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="emv-i0-viQ" kind="relationship" relationship="rootViewController" id="iIg-tf-DZy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48E-N9-JjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2747.663551401869" y="438.66090712742982"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fk5-CG-MIZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="MySquad Logo" width="1362" height="246"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

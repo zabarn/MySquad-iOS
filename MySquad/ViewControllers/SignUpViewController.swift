@@ -42,10 +42,7 @@ class SignUpViewController: UIViewController {
     }
     
     func transitionToHome(){
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeUITabBarContoller
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        performSegue(withIdentifier: "SignUpToTabBar", sender: nil)
     }
     
     override func viewDidLoad() {
